@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Watch Sync</h1>
+      <label class="switch" title="Sync on/off">
+        <input type="checkbox" id="enabled" />
+        <span></span>
+      </label>
+    </header>
+
+    <section id="server-box" hidden>
+      <div class="label">Server</div>
+      <div class="row">
+        <input id="server" spellcheck="false" placeholder="watch-sync.you.workers.dev" />
+        <button id="save-server">Save</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Friends</div>
+      <div id="friend">…</div>
+      <ul id="friends"></ul>
+    </section>
+
+    <section id="share-box" hidden>
+      <button id="share" class="primary">Invite friends to this page</button>
+      <div id="shared" class="ok" hidden>Your friends see this page.</div>
+    </section>
+
+    <section id="video-box">
+      <div class="label">Video on this tab</div>
+      <div id="video">Looking…</div>
+      <div id="notice" class="hint" hidden></div>
+      <div id="elsewhere" class="hint" hidden>Sync is on another tab. Press play here to move it.</div>
+    </section>
+
+    <section>
+      <div class="label">Room</div>
+      <div class="row" id="room-view">
+        <code id="room"></code>
+        <button id="copy-room">Copy</button>
+        <button id="change-room">Change</button>
+      </div>
+      <div class="row" id="room-edit" hidden>
+        <input id="room-input" spellcheck="false" placeholder="Paste a friend's room code" />
+        <button id="join-room">Join</button>
+        <button id="cancel-room">Cancel</button>
+      </div>
+      <div class="hint-muted">Friends join you by entering the same code.</div>
+    </section>
+
+    <div id="error" class="error"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

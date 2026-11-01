@@ -1,0 +1,9 @@
+.env
+.profiles/
+dist/
+server/.wrangler/
+server/.wrangler.deploy.toml
+node_modules/
+extension/config.js
+tools/local/
+.DS_Store

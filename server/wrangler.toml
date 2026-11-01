@@ -1,0 +1,16 @@
+name = "watch-sync"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+# How many people can be in one room at the same time.
+MAX_PEERS = "2"
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "Room"
+
+# SQLite-backed class: required on the Workers Free plan.
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]

@@ -1,0 +1,22 @@
+{
+  "name": "watch-sync-relay",
+  "private": true,
+  "description": "WebSocket relay for the Watch Sync browser extension (Cloudflare Workers + Durable Objects).",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.107.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "ROOMS": {
+        "description": "Durable Object namespace: one object per room."
+      },
+      "MAX_PEERS": {
+        "description": "How many people can be in one room at the same time (default 2)."
+      }
+    }
+  }
+}
